@@ -2,80 +2,76 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class juegos : MonoBehaviour
 {
     int sumatotal;
 
 
     public int cantidaddinero;
+
     public GameObject[] objetos;
+
     public Transform lugar1;
     public Transform lugar2;
+
     public Text precios1;
-    public Text  precios2;
+    public Text precios2;
     public Text dineroactual;
-    public GameObject panel;
     public Text resultado;
-    public Button alcanzaysobra;
-    public Button alcanza;
-    public Button falta;
-    public Button jugarotravez;
-    public Button salir;
+
+    public GameObject panel;
+   
+
     
-    private int objeto1;
-    private int objeto2;
     private GameObject ponerob1;
     private GameObject ponerob2;
     // Start is called before the first frame update
     void Start()
     {
-     
-        GenerarProductos();
+        ponerob1 = Instantiate(objetos[Random.Range(0, objetos.Length)], lugar1.position, Quaternion.identity);
+        ponerob2 = Instantiate(objetos[Random.Range(0, objetos.Length)], lugar2.position, Quaternion.identity);
+
+        Producto producto1 = ponerob1.GetComponent<Producto>();
+        Producto producto2 = ponerob2.GetComponent<Producto>();
+
+        sumatotal = producto1.precio + producto2.precio;
+
+        precios1.text = producto1.precio.ToString();
+        precios2.text = producto2.precio.ToString();
+
+        
+
+        cantidaddinero = Random.Range(1000, 10000);
+        dineroactual.text = "Dinero: $" + cantidaddinero.ToString();
+
         panel.SetActive(false);
-        GenerarCantidadDinero();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    void GenerarCantidadDinero()
-    {
-        
-        cantidaddinero = Random.Range(50, 1000);
-        dineroactual.text = "Dinero: $" + cantidaddinero.ToString();
-    }
-    void GenerarProductos()
-    {
-        if (ponerob1 != null) Destroy(ponerob1);
-        if (ponerob2 != null) Destroy(ponerob2);
 
-        ponerob1 = Instantiate(objetos[Random.Range(0, objetos.Length)], lugar1.position, Quaternion.identity);
-        ponerob2 = Instantiate(objetos[Random.Range(0, objetos.Length)], lugar2.position, Quaternion.identity);
-
-        Producto producto1 = ponerob1.GetComponent<Producto>();
-        Producto producto2  = ponerob2.GetComponent<Producto>();
-        sumatotal = producto1.precio + producto2.precio;
-        precios1.text = objeto1.ToString();
-        precios2.text =  objeto2.ToString();
     }
-    void VerificarAlcanzaYSobra()
-    {
+    
         
+    
+    
+    public void VerificarAlcanzaYSobra()
+    {
+
         bool bien = cantidaddinero > sumatotal;
         MostrarResultado(bien);
     }
 
-    void VerificarAlcanzaJusto()
+    public void VerificarAlcanzaJusto()
     {
-        ;
+        
         bool bien = cantidaddinero == sumatotal;
         MostrarResultado(bien);
     }
 
-    void VerificarNoAlcanza()
+    public void VerificarNoAlcanza()
     {
         bool bien = cantidaddinero < sumatotal;
         MostrarResultado(bien);
@@ -87,19 +83,17 @@ public class juegos : MonoBehaviour
         if (bien)
         {
             resultado.text = "¡Correcto!";
-            jugarotravez.GetComponentInChildren<Text>().text = "Reiniciar el desafío";
         }
         else
         {
             resultado.text = "Incorrecto.";
-            jugarotravez.GetComponentInChildren<Text>().text = "Volver a intentarlo";
+            
         }
     }
 
     public void JugarOtraVez()
     {
-        panel.SetActive(false);
-        GenerarProductos();
+        SceneManager.LoadScene(1);
     }
 
     public void Salir()
