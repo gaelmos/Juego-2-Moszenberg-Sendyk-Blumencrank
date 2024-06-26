@@ -396,7 +396,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1943652131}
         m_MethodName: VerificarNoAlcanza
         m_Mode: 1
         m_Arguments:
@@ -886,7 +886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783829595
 GameObject:
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1943652131}
         m_MethodName: Salir
         m_Mode: 1
         m_Arguments:
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1943652131}
         m_MethodName: VerificarAlcanzaJusto
         m_Mode: 1
         m_Arguments:
@@ -1883,13 +1883,92 @@ RectTransform:
   - {fileID: 1382518490}
   - {fileID: 189515634}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1943652130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943652132}
+  - component: {fileID: 1943652131}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1943652131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943652130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfdfe9489c875b1469022c7a0245a53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantidaddinero: 0
+  objetos:
+  - {fileID: 843235060964565162, guid: 4410fac3b5dff5c44bf88f1fc35bd959, type: 3}
+  - {fileID: 5458000958935572596, guid: f5c2a430e1692204f975926a2b33a32b, type: 3}
+  - {fileID: 1292699316306979774, guid: 9f9014cac44b7c544a2fa4b834c52318, type: 3}
+  - {fileID: 7928427288021762049, guid: 40ca23e601efaf548b9dc0c9176d155c, type: 3}
+  - {fileID: 7476756685229872207, guid: 03be16125e5718148b795337309f1a6d, type: 3}
+  - {fileID: 3888022180319366794, guid: cf6401f4667aca340a08296f28397756, type: 3}
+  - {fileID: 5515912156960527311, guid: fdfb35142c72445459807a06e5241ff0, type: 3}
+  - {fileID: 8212936431608532911, guid: 2f6fc20518938bf4ba1ec12dfcaf26c6, type: 3}
+  - {fileID: 6109195612661805588, guid: 9a431da758cf5a846880f92630163611, type: 3}
+  - {fileID: 5285565423796335587, guid: 1e6c55b031d83924d9c2929798c9a522, type: 3}
+  - {fileID: 8129477986316876064, guid: a3725a016d18b7341bed49d087c99d0b, type: 3}
+  - {fileID: 5137719905925703373, guid: 99312ca318643be4389a4d819c140d49, type: 3}
+  - {fileID: 4091321948888478289, guid: dfc68ce6474024f4bb96323f9c7d0944, type: 3}
+  - {fileID: 7868316996006659063, guid: 5008d449e054a4e439ef3b9b7e5cfe5a, type: 3}
+  - {fileID: 607129603404142337, guid: dc762b3212074494b8482e8d7c55c4c9, type: 3}
+  - {fileID: 682000477712651188, guid: 6889482d6e6399b449c1890ea5574c8f, type: 3}
+  - {fileID: 135142552028353186, guid: fee20bf18ee335e408c2fb7136e11d69, type: 3}
+  - {fileID: 585772501905177902, guid: efbb9cb9a1ec3154fbace6bc507e007e, type: 3}
+  - {fileID: 6025966668222142625, guid: 092944893fdf7f347ad98f2e2c14acc1, type: 3}
+  - {fileID: 3382466139690661440, guid: ea46e5163e6da1d4db772f8447a661d0, type: 3}
+  - {fileID: 4065091229400259039, guid: 1799a0e0ba8c11a49b44a811a841918c, type: 3}
+  - {fileID: 4074915682119652321, guid: 8e053c6906c425a4eaa3572a6a1975af, type: 3}
+  lugar1: {fileID: 75398153}
+  lugar2: {fileID: 957185808}
+  precios1: {fileID: 313390716}
+  precios2: {fileID: 1382518491}
+  dineroactual: {fileID: 519798270}
+  resultado: {fileID: 1451821207}
+  panel: {fileID: 189515633}
+--- !u!224 &1943652132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943652130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 282.5, y: 159}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2035130657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,7 +2125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1943652131}
         m_MethodName: VerificarAlcanzaYSobra
         m_Mode: 1
         m_Arguments:
@@ -2171,7 +2250,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1943652131}
         m_MethodName: JugarOtraVez
         m_Mode: 1
         m_Arguments:
