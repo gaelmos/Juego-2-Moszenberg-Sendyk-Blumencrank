@@ -31,7 +31,7 @@ public class juegos : MonoBehaviour
     {
         ponerob1 = Instantiate(objetos[Random.Range(0, objetos.Length)], lugar1.position, Quaternion.identity);
         ponerob2 = Instantiate(objetos[Random.Range(0, objetos.Length)], lugar2.position, Quaternion.identity);
-
+       
         Producto producto1 = ponerob1.GetComponent<Producto>();
         Producto producto2 = ponerob2.GetComponent<Producto>();
 
@@ -93,7 +93,7 @@ public class juegos : MonoBehaviour
 
     public void JugarOtraVez()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("ui");
     }
 
     public void Salir()
