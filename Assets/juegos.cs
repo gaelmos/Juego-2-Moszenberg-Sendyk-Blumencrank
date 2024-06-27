@@ -43,7 +43,7 @@ public class juegos : MonoBehaviour
         
 
         cantidaddinero = Random.Range(1000, 10000);
-        dineroactual.text = "Dinero: $" + cantidaddinero.ToString();
+        dineroactual.text =  cantidaddinero.ToString();
 
         panel.SetActive(false);
     }
